@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>FreeCodeCamp - Responsive Webdesign Course: Project 2 - Survey Form</title>
+</head>
+
+<body>
+    <h1 id="title">Poll about polished Polish poles</h1>
+
+    <p id="description">Please complete all fields and submit...</p>
+
+    <form id="survey-form">
+        <label id="name-label" for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+        <label id="email-label" for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="valid email address"
+            title="please enter a valid email address" required>
+        <label id="number-label" for="number">On a scale of 1 (never) to 10 (all day), how often do you think about
+            poles?</label>
+        <input type="number" id="number" name="number" required min="1" max="10" placeholder="value from 1 to 10">
+        <label id="dropdown-label" for="dropdown">Have you ever been to Poland?</label>
+        <select id="dropdown" name="dropdown" required>
+            <option value="">pick one...</option>
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select>
+        <fieldset id="radio-group">
+            <legend>Pick your favourite finish</legend>
+            <input type="radio" id="radio-gloss" name="radio-group" value="gloss">
+            <label id="radio-gloss-label">gloss</label>
+            <input type="radio" id="radio-matt" name="radio-group" value="matt">
+            <label id="radio-matt-label">matt</label>
+            <input type="radio" id="radio-other" name="radio-group" value="other">
+            <label id="radio-other-label">other</label>
+        </fieldset>
+        <fieldset id="checkbox-group">
+            <legend>Select your preferred lengths</legend>
+            <input type="checkbox" name="checkbox-group" id="cb-lt1m" value="lt1m">
+            <label for="cb-lt1m">less than 1 metre</label>
+            <input type="checkbox" name="checkbox-group" id="cb-1to2m" value="1to2m">
+            <label for="cb-1to2m">1 to 2 metres</label>
+            <input type="checkbox" name="checkbox-group" id="cb-2to5m" value="2to5m">
+            <label for="cb-2to5m">2 to 5 metres</label>
+            <input type="checkbox" name="checkbox-group" id="cb-5to10m" value="5to10m">
+            <label for="cb-5to10m">5 to 10 metres</label>
+            <input type="checkbox" name="checkbox-group" id="cb-gt10m" value="gt10m">
+            <label for="cb-gt10m">greater than 10 metres</label>
+        </fieldset>
+        <textarea name="textarea" id="textarea" cols="35" rows="5"
+            placeholder="place any additional comments here"></textarea>
+        <input type="submit" id="submit" name="submit" value="submit">
+    </form>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
