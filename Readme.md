@@ -8,6 +8,6 @@ I've not attempted to create visually pleasing or publishable webpages, but rath
 
 - [Project 1 - Tribute Page]()
 - [Project 2 - Survey Form]()
-- [Project 3 - Landing Page/index.html">Project 3 - Landing Page]()
+- [Project 3 - Landing Page](https://74c5.github.io/ResponsiveWebDesign/Project%203%20-%20Landing%20Page/index.html)
 - [Project 4 - ]()
 - [Project 5 - ]()
