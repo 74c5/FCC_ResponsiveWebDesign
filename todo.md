@@ -1,2 +1,4 @@
-- [ ] port other projects
+- [ ] project 4
+    - upto story 8 ish?
 - [ ] tweak styling in master css
+- [ ] project 5
