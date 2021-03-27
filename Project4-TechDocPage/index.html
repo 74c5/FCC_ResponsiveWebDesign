@@ -9,43 +9,48 @@
 </head>
 
 <body>
-    <main id="main-doc">
-        <nav id="navbar">
-            <header>My Most Used Linux Commands</header>
-            <ul>
-                <li><a href="" class="nav-link"></a></li>
-            </ul>
-        </nav>
+    <nav id="navbar">
+        <header>Linux Commands</header>
+        <ul>
+            <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#Installing_Updates" class="nav-link">Installing Updates</a></li>
+            <li><a href="#Listing_Files" class="nav-link">Listing Files</a></li>
+            <li><a href="#Aliasing" class="nav-link">Aliasing</a></li>
+            <li><a href="#Ping" class="nav-link">Ping</a></li>
+        </ul>
+    </nav>
 
-        <section class="main-section">
-            <header id="introduction">Introduction</header>
+    <main id="main-doc">
+
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
             <p>What follows is a lists of commands that I find most useful for everyday use on my linux desktop.</p>
             <p>This is a hardly an exhaustive list of linux CLIs, but rather ones that I notice that I am using often.
             </p>
         </section>
 
-        <section class="main-section">
-            <header id="installing_updates">Installing Updates</header>
-            <p>Since switching to an Ubuntu base (from Arch), this is no longer a single command but rather several
-                instructions.</p>
+        <section class="main-section" id="Installing_Updates">
+            <header>Installing Updates</header>
+            <p>These are Ubuntu/Debian) specific instructions...</p>
             <p>A list of updates can be fetched using:</p>
             <pre><code>$ sudo apt update</code></pre>
             <p>and installed with:</p>
-            <code>$ sudo apt upgrade</code>
+            <pre><code>$ sudo apt upgrade</code></pre>
             <p>Redundant packages can be removed using:</p>
-            <code>$ sudo apt autoremove</code>
+            <pre><code>$ sudo apt autoremove</code></pre>
             <br>
             <p>I also have several flatpak applications installed, so updating also requires:</p>
-            <code>$ flatpak update</code>
+            <pre><code>$ flatpak update</code></pre>
             <br>
-            <p>When I ran an arch based system and used Yay as my Aur helper, I could just use:</p>
-            <code>$ yay -Syua</code>
-            <p>Of course, this might take just as long since I was would have to re-compile most of my Aur applications.
+            <p>When I ran an arch based system and used Yay as my Aur helper, I could use just a single command:</p>
+            <pre><code>$ yay -Syua</code></pre>
+            <p>Of course, this might take just as long (or longer) since I was would have to re-compile most of my Aur
+                applications.
             </p>
         </section>
 
-        <section class="main-section">
-            <header id="listing_files">Listing Files</header>
+        <section class="main-section" id="Listing_Files">
+            <header>Listing Files</header>
             <p>I use the <code>ls</code> command with the switches <code>als</code> by default, e.g.:</p>
             <pre><code>$ ls -als</code></pre>
             <p>In fact it's muscle memory now. For 95% of my usecases this gives me all the information, I could ever
@@ -54,28 +59,33 @@
             <p>The switches have the following effects:</p>
             <ul>
                 <li><code>-a</code> lists all entries in the folder, even those beginning with <code>.</code> and
-                    <code>..</code></li>
+                    <code>..</code>
+                </li>
                 <li><code>-l</code> uses long list format. Each file gets its own line with columns for permissions,
                     ownership and last date of modification.</li>
                 <li><code>-s</code> prints the size of the file in blocks</li>
             </ul>
         </section>
 
-        <section class="main-section">
-            <head id="aliasing">Aliasing</head>
-            <p>I usually put aliases in or trigger alias creation from the last section of my <code>.bashrc</code> (or similar) file. These alias serve several purposes, namely:</p>
+        <section class="main-section" id="Aliasing">
+
+            <header>Aliasing</header>
+            <p>I usually put aliases in or trigger alias creation from the last section of my <code>.bashrc</code> (or
+                similar) file. These alias serve several purposes, namely:</p>
             <ul>
                 <li>Abbreviating longer commands making them faster to use and easier to remember.</li>
                 <li>Creating shortcut commands for changing to common directories.</li>
-                <li>Making commands from my own custom scripts (usually under development) available on the command line. (Yes, it's a bit of a hack, but I prefer it over updating my path.</li>
+                <li>Making commands from my own custom scripts (usually under development) available on the command
+                    line. (Yes, it's a bit of a hack, but I prefer it over updating my path.</li>
             </ul>
             <br>
-            <p>Examples usecases:</p>
+            <p>Examples/Usecases:</p>
             <ul>
                 <li>I alias mounting of another windows computer at home to a short commmand, I only mount this
                     file system to facilitate backups and so don't need it all the time. I can't use auto mount, since I
                     have to ensure that the other computer is turned on before issuing the command.</li>
-                <li>I have shortcuts like <code>cdprojx</code> which will jump me to my project directory, which is often on a separate partition or drive.</li>
+                <li>I have shortcuts like <code>cdprojx</code> which will jump me to my project directory, which is
+                    often on a separate partition or drive.</li>
                 <li></li>
             </ul>
             <br>
@@ -84,11 +94,15 @@
             <p>means that I only need to type <code>projx</code> to change to my "project X" working directory</p>
         </section>
 
-        <section>
-            <head id="ping">Ping</head>
-            <p>My wired ethernet connection is somewhat dodgy, this may have something to do with my aged tech, some sort of incompatibility or the power over ethernet adapters that I use.</p>
-            <p>But let's not head down that rabbit hole. Mosty, I <code>ping</code> a public DNS to test that my connection is up.</p>
+        <section class="main-section" id="Ping">
+
+            <header>Ping</header>
+            <p>Mosty, I <code>ping</code> a public DNS to test that my connection is up.</p>
             <pre><code>$ ping 1.1.1.1</code></pre>
+            <br>
+            <p>My wired ethernet connection is somewhat dodgy. This may have something to do with my aged tech, some
+                sort of incompatibility or the ethernet over power adapters that I use. But let's not head down that
+                rabbit hole.</p>
         </section>
 
     </main>
