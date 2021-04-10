@@ -1,0 +1,289 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin@200;400&display=swap');
+
+/* colour scheme */
+:root {
+    --menu-text: white;
+    --menu-bg: purple;
+    --menu-highlight: orange;
+    --menu-select: yellow;
+    --page-bg: lightblue;
+    --welcome-bg: grey;
+    --icon-color: #d0d0d0;
+    --text-color: #F0F0F0;
+}
+
+/* reset defaults */
+* {
+    font-family: 'Palanquin', sans-serif;;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--page-bg);
+    color: var(--text-color);
+}
+
+#navbar {
+    background-color: var(--menu-bg);
+    position: -webkit-sticky;
+    position: sticky;
+    overflow: hidden;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#navbar > ul {
+    float: right;
+    list-style: none;
+}
+
+#navbar > ul > li {
+    display: inline-block;
+}
+
+.navlink {
+    font-family: 'Source Code Pro', monospace;
+    display: block;
+    color: var(--menu-text);
+    text-align: center;
+    min-width: 5rem;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+.navlink:hover {
+    background-color: var(--menu-highlight);
+}
+
+#welcome-section {
+    min-height: 100vh;
+    background-color: var(--welcome-bg);
+}
+
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
+#name {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    /* background: radial-gradient(var(--menu-bg) 15%, var(--menu-bg), var(--menu-highlight)); */
+    /* background: linear-gradient(var(--menu-highlight) 10%, var(--menu-bg) 80%, var(--menu-highlight) 10%); */
+    /* background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
+
+    animation-name: warp-bg;
+    animation-duration: 2s;
+    /* animation-timing-function: cubic-bezier(.21,.7,.65,1.05); */
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes warp-bg {
+    from {
+        left: 0px;
+        background: radial-gradient(var(--menu-bg) 25%, var(--menu-highlight));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+        }
+
+    20% {
+        background: radial-gradient(var(--menu-bg) 30%, var(--menu-highlight));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+        }
+
+    40% {
+        background: radial-gradient(var(--menu-bg) 35%, var(--menu-highlight));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+        }
+
+    60% {
+        background: radial-gradient(var(--menu-bg) 40%, var(--menu-highlight));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+        }
+
+    80% {
+        background: radial-gradient(var(--menu-bg) 45%, var(--menu-highlight));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+        }
+                                
+    to {
+        background: radial-gradient(var(--menu-bg) 50%, var(--menu-highlight));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+        }
+}
+
+#welcome-section > p {
+    font-size: 1.25rem;
+}
+
+#projects {
+    background: linear-gradient(var(--welcome-bg), var(--menu-highlight));
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+
+#projects > h2 {
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+
+#project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.project-tile {
+    text-decoration: none;
+    background: rgba(0,0,0,0.05);
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0,0,0,0.05);
+    padding: 0.5rem;
+}
+
+.project-tile:hover {
+    border: 1px solid var(--menu-highlight);
+}
+
+.project-tile > h3 {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.25rem;
+    text-transform: lowercase;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.project-tile > img {
+    width: 100%;
+    border: 1px var(--welcome-bg);
+}
+
+#contact {
+    background: linear-gradient(var(--menu-highlight), var(--menu-bg));
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+}
+
+#contact > h2 {
+    text-transform: lowercase;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+#contact-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.contact-link {
+    min-width: 290px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--icon-color);
+    font-size: 1.5rem;
+}
+
+.contact-link:hover {
+    color: var(--menu-highlight);
+}
+
+.contact-link > i {
+    font-size: 1.25rem;
+    padding-right: 0.5rem;
+}
+
+@media screen and (min-width: 800px) {
+    .navlink {
+        font-size: 1.25rem;
+    }
+
+    #welcome-section > h1 {
+        font-size: 4rem;
+        padding-bottom: 1rem;
+    }
+
+    #name {
+        font-size: 4rem;
+    }
+
+    #welcome-section > p {
+        font-size: 2rem;
+        font-weight: 200;
+    }
+
+    #projects > h2 {
+        font-size: 2.5rem;
+        padding-bottom: 1rem;
+    }
+
+    #project-list {
+        grid-template-columns: repeat(2, minmax(290px, 450px));
+    }
+
+    #contact > h2 {
+        font-size: 2.5rem;
+        padding-bottom: 2rem;
+    }
+
+
+}
